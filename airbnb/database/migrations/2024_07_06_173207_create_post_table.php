@@ -13,10 +13,9 @@ return new class extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
-
-c   d^ds    $table->string('title');
+            $table->string('title');
             $table->string('slug')->unique();
-            $table->longTest('content');
+            $table->longText('content');
             $table->timestamps();
         });
     }
