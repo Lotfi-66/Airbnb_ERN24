@@ -3,8 +3,18 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
+/**
+ * @mixin IdeHelperPost
+ */
 class Post extends Model
 {
-    // Contenu de la classe
+    use HasFactory;
+
+    protected $fillable = [
+        'title',
+        'slug',
+        'content'
+    ];
 }
